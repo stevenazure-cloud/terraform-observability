@@ -47,13 +47,13 @@ terraform apply
 You can test the alarm system from your terminal to see if the SNS notification pipeline works:
 
 Trigger Alarm (State: ALARM):
-
+      bash
 aws cloudwatch set-alarm-state --alarm-name "observability-demo-cpu" --state-value ALARM --state-reason "Live testing of observability pipeline" --region us-east-1
-
+      
 Reset Alarm (State: OK):
-
+      bash
 aws cloudwatch set-alarm-state --alarm-name "observability-demo-high-cpu" --state-value OK --state-reason "Test successful" --region us-east-1
-
+      
 ## Built By
 
 Steven Azure. Cloud Engineer and DevOps Specialist he is the one who built the Terraform CloudWatch Observability Demo project.
